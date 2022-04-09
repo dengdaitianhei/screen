@@ -136,6 +136,8 @@ class MovePanel(ScreenPanel):
         if "gcode_move" in data and "gcode_position" in data["gcode_move"]:
             self.labels['pos_x'].set_text("X: %.2f" % (data["gcode_move"]["gcode_position"][0]))
             self.labels['pos_y'].set_text("Y: %.2f" % (data["gcode_move"]["gcode_position"][1]))
+            #self.labels['pos_z'].set_text("Z: %.2f" % (data["gcode_move"]["gcode_position"][2]))#flsun delete ,for unify screen Z coordinates
+        if "gcode_move" in data and "gcode_position" in data["gcode_move"]:#flsun add ,for unify screen Z coordinates
             self.labels['pos_z'].set_text("Z: %.2f" % (data["gcode_move"]["gcode_position"][2]))
 
     def change_distance(self, widget, distance):
