@@ -256,7 +256,8 @@ class KlipperScreen(Gtk.Window):
                 "configfile": ["config"],
                 "display_status": ["progress", "message"],
                 "fan": ["speed"],
-                "gcode_move": ["extrude_factor", "gcode_position", "homing_origin", "speed_factor"],
+                "filament_switch_sensor filament_sensor": ["filament_detected"], #flsun add ,add the all line ,for filament runout detect function
+                "gcode_move": ["extrude_factor", "gcode_position", "homing_origin", "speed_factor", "speed"], #flsun add ,add a "speed",its function is show speed on screen
                 "idle_timeout": ["state"],
                 "pause_resume": ["is_paused"],
                 "print_stats": ["print_duration", "total_duration", "filament_used", "filename", "state", "message"],
@@ -381,6 +382,44 @@ class KlipperScreen(Gtk.Window):
         self.popup_message = box
 
         GLib.timeout_add_seconds(10, self.close_popup_message)
+
+        return False
+    #flsun add  ,add a show_popup_message_filament() ,it's almost same with show_popup_message(),just #GLib.timeout_add_seconds(10, self.close_popup_message)
+    def show_popup_message_filament(self, message, level=2):
+        if self.popup_message is not None:
+            self.close_popup_message()
+
+        box = Gtk.Box()
+        box.get_style_context().add_class("message_popup")
+
+        if level == 1:
+            box.get_style_context().add_class("message_popup_echo")
+        else:
+            box.get_style_context().add_class("message_popup_error")
+
+        box.set_size_request(self.width, self.gtk.get_header_size())
+        label = Gtk.Label()
+        if "must home axis first" in message.lower():
+            message = "Must home all axis first."
+        label.set_text(message)
+
+        close = Gtk.Button.new_with_label("X")
+        close.set_can_focus(False)
+        close.props.relief = Gtk.ReliefStyle.NONE
+        close.connect("clicked", self.close_popup_message)
+
+        box.pack_start(label, True, True, 0)
+        box.pack_end(close, False, False, 0)
+        box.set_halign(Gtk.Align.CENTER)
+
+        cur_panel = self.panels[self._cur_panels[-1]]
+
+        self.base_panel.get().put(box, 0, 0)
+
+        self.show_all()
+        self.popup_message = box
+
+        #GLib.timeout_add_seconds(10, self.close_popup_message)
 
         return False
 
@@ -807,6 +846,8 @@ class KlipperScreen(Gtk.Window):
         self.base_panel.process_update(action, data)
         if self._cur_panels[-1] in self.subscriptions:
             self.panels[self._cur_panels[-1]].process_update(action, data)
+            if self._cur_panels[0] == "job_status":  #flsun add ,update job_status page if now page is fine_tune or other page based on job_status
+                self.panels[self._cur_panels[0]].process_update(action, data)  #flsun add
 
     def _confirm_send_action(self, widget, text, method, params={}):
         _ = self.lang.gettext
