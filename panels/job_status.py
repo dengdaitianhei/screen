@@ -3,6 +3,7 @@ import gi
 import logging
 import math
 import os
+import time  #flsun add ,add  a time module
 
 gi.require_version("Gtk", "3.0")
 from gi.repository import Gtk, Gdk, GLib, Pango
@@ -122,6 +123,15 @@ class JobStatusPanel(ScreenPanel):
         itl_box.add(hourglass)
         itl_box.add(self.labels['left'])
         itl_box.add(self.labels['time_left'])
+        self.labels['itl_box'] = itl_box
+
+	#flsun add  Creat Move speed,the next paragraph is new content
+        move_speed = self._gtk.Image("speed+.svg", None, .6, .6)
+        self.labels['move_speed'] = Gtk.Label(label="0mm/s")
+        self.labels['move_speed'].get_style_context().add_class("printing-info")
+        itl_box = Gtk.Box(spacing=0)
+        itl_box.add(move_speed)
+        itl_box.add(self.labels['move_speed'])
         self.labels['itl_box'] = itl_box
 
         # Create overall items
@@ -396,9 +406,20 @@ class JobStatusPanel(ScreenPanel):
                 self.speed = int(data["gcode_move"]["speed_factor"]*100)
                 self.labels['speed'].set_text("%3d%%" % self.speed)
 
+        #flsun add ,the next paragraph is new content ,its function is update speed (mm/s) and show it on screen
+        if "gcode_move" in data and "speed" in data["gcode_move"]:
+            self.labels['move_speed'].set_text("%.0fmm/s" % (data["gcode_move"]["speed"]*self.speed/100/60))
+
         if "fan" in data and "speed" in data['fan']:
             self.fan = int(round(data['fan']['speed'], 2)*100)
             self.labels['fan'].set_text("%3d%%" % self.fan)
+
+        #flsun add ,add the next para ,its function is show "filament runout" on sceen when filament runout ,and close the show when filament plug in
+        if "filament_switch_sensor filament_sensor" in data and "filament_detected" in data["filament_switch_sensor filament_sensor"]:
+            if data["filament_switch_sensor filament_sensor"]["filament_detected"] == False:
+                self._screen.show_popup_message_filament("filament runout")
+            else:
+                self._screen.close_popup_message() 
 
         self.state_check()
         if self.state not in ["printing", "paused"]:
@@ -450,10 +471,12 @@ class JobStatusPanel(ScreenPanel):
         elif ps['state'] == "complete":
             self.progress = 1
             self.update_progress()
+            while self._screen._cur_panels[-1] != "job_status":  #flsun add ,if page is not job_status ,back to job_status
+                self._screen._menu_go_back()#flsun add
             self.set_state("complete")
             self._screen.wake_screen()
             self.remove_close_timeout()
-            timeout = self._config.get_main_config().getint("job_complete_timeout", 30)
+            timeout = self._config.get_main_config().getint("job_complete_timeout", 0)  #flsun modify ,change 30s to 0s ,so page won't jump to main page after print
             if timeout != 0:
                 self.close_timeouts.append(GLib.timeout_add_seconds(timeout, self.close_panel))
             return False
@@ -517,6 +540,8 @@ class JobStatusPanel(ScreenPanel):
             self.labels['button_grid'].attach(self.labels['control'], 3, 0, 1, 1)
             self.enable_button("resume", "cancel")
         else:
+            if self.state == "cancelled":#flsun add ,if cancel print ,wait 10s to show menu button ,to solve a bug
+                time.sleep(10)
             self.labels['button_grid'].attach(Gtk.Label(""), 0, 0, 1, 1)
             self.labels['button_grid'].attach(Gtk.Label(""), 1, 0, 1, 1)
             self.labels['button_grid'].attach(self.labels['restart'], 2, 0, 1, 1)
