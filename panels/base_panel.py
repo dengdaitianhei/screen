@@ -115,7 +115,9 @@ class BasePanel(ScreenPanel):
         self.control['time_box'] = Gtk.Box()
         self.control['time_box'].set_halign(Gtk.Align.END)
         self.control['time_box'].set_size_request(0, self.title_spacing)
-        self.control['time'] = Gtk.Label("00:00 AM")
+        #flsun modify，set Gtk.Label("00:00 AM") Gtk.Label("00:00   AM") by zzcatvs
+        #self.control['time'] = Gtk.Label("00:00 AM")
+        self.control['time'] = Gtk.Label("00:00   AM")
         self.control['time'].set_size_request(0, self.title_spacing)
         self.control['time'].set_halign(Gtk.Align.END)
         self.control['time'].set_valign(Gtk.Align.CENTER)
@@ -341,5 +343,7 @@ class BasePanel(ScreenPanel):
             if confopt == "True":
                 self.control['time'].set_text(now.strftime("     %H:%M"))
             else:
-                self.control['time'].set_text(now.strftime("%I:%M %p"))
+                #flsun modify，set strftime("%I:%M %p") strftime("%H:%M") by zzcatvs
+                #self.control['time'].set_text(now.strftime("%I:%M %p"))
+                self.control['time'].set_text(now.strftime("%I:%M %p         "))
         return True

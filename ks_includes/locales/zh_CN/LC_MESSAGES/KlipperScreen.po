@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KlipperScreen\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-26 15:48-0300\n"
-"PO-Revision-Date: 2022-02-26 15:47-0300\n"
+"PO-Revision-Date: 2022-04-28 16:58+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_CN\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #, python-format
 msgid "%s will be updated to version"
@@ -27,6 +27,16 @@ msgstr "（默认)"
 
 msgid "24 Hour Time"
 msgstr "使用 24 小时制"
+
+msgid "Screen Restart"
+msgstr "重启屏幕"
+
+
+msgid "Splash"
+msgstr "启动"
+
+msgid "Printer"
+msgstr "打印机"
 
 msgid "Abort"
 msgstr "终止"
@@ -61,6 +71,32 @@ msgstr "热床调平"
 msgid "Bed Mesh"
 msgstr "热床网格"
 
+# flsun add ,from next line until next flsun add
+msgid "Please plug in leveling switch before auto-leveling"
+msgstr "请在自动调平前插上调平模块"
+
+msgid "Please remove leveling switch before move Z0"
+msgstr "请在移动Z0之前移除调平模块"
+
+msgid "Move Z0"
+msgstr "移动到Z0"
+
+msgid "light"
+msgstr "灯光"
+
+msgid "LED ON"
+msgstr "开启LED灯"
+
+msgid "LED OFF"
+msgstr "关闭LED灯"
+
+msgid "LOGO ON"
+msgstr "开启LOGO灯"
+
+msgid "LOGO OFF"
+msgstr "关闭LOGO灯"
+
+# flsun add
 msgid "Bltouch found applied offset"
 msgstr "Bltouch 发现应用的偏移量"
 
@@ -206,7 +242,7 @@ msgid "Hide"
 msgstr "隐藏"
 
 msgid "Hide sensors in Temp."
-msgstr "在温度中隐藏传感器。"
+msgstr "在温度中隐藏传感器"
 
 msgid "Home"
 msgstr "归零"
@@ -313,7 +349,7 @@ msgid "Left:"
 msgstr "剩余时间:"
 
 msgid "Limits"
-msgstr "打印机限制"
+msgstr "打印机设置"
 
 msgid "Load"
 msgstr "载入耗材"
@@ -402,7 +438,7 @@ msgid "Printer Connections"
 msgstr "打印机列表"
 
 msgid "Printing"
-msgstr "印刷"
+msgstr "打印中"
 
 msgid "Probe found applied offset"
 msgstr "Probe 发现应用的偏移量"
@@ -426,7 +462,7 @@ msgid "Reference"
 msgstr "参考"
 
 msgid "Restart"
-msgstr "重启Klipper"
+msgstr "重新开始"
 
 msgid "Resume"
 msgstr "恢复"
@@ -600,6 +636,9 @@ msgstr "mm/s"
 msgid "mm/s^2"
 msgstr "mm/s^2"
 
+msgid "Control"
+msgstr "控制"
+
 #~ msgid "Show Only Heaters in Temp."
 #~ msgstr "仅显示使用中的加热器"
 
@@ -644,9 +683,6 @@ msgstr "mm/s^2"
 
 #~ msgid "Cancel Change"
 #~ msgstr "取消改动"
-
-#~ msgid "Control"
-#~ msgstr "控制"
 
 #~ msgid "Load Average"
 #~ msgstr "平均负载"

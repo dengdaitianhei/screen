@@ -85,8 +85,8 @@ class SplashScreenPanel(ScreenPanel):
             logging.debug("Adding power button")
             self.labels['power'].connect("clicked", self.power_on, devices)
             self.labels['actions'].add(self.labels['power'])
-
-        self.labels['actions'].add(self.labels['restart'])
+        #flsun add,del Splash Screen "restart" button. by:zzcatvs
+        #self.labels['actions'].add(self.labels['restart'])
         self.labels['actions'].add(self.labels['firmware_restart'])
         self.labels['actions'].add(self.labels['menu'])
         self.labels['actions'].show_all()

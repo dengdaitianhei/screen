@@ -8,7 +8,7 @@ msgstr ""
 "Project-Id-Version: KlipperScreen\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-02-26 15:48-0300\n"
-"PO-Revision-Date: 2022-02-26 15:47-0300\n"
+"PO-Revision-Date: 2022-04-28 16:58+0800\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: zh_TW\n"
@@ -16,7 +16,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #, python-format
 msgid "%s will be updated to version"
@@ -27,6 +27,9 @@ msgstr "(預設)"
 
 msgid "24 Hour Time"
 msgstr "24 小時制"
+
+msgid "Screen Restart"
+msgstr "重启屏幕"
 
 msgid "Abort"
 msgstr "中止"
@@ -61,6 +64,32 @@ msgstr "熱床調平"
 msgid "Bed Mesh"
 msgstr "網格床"
 
+# flsun add ,from next line until next flsun add
+msgid "Please plug in leveling switch before auto-leveling"
+msgstr "自動調平前請插入調平開關"
+
+msgid "Please remove leveling switch before move Z0"
+msgstr "移動 Z0 前請取下調平開關"
+
+msgid "Move Z0"
+msgstr "移動 Z0"
+
+msgid "light"
+msgstr "燈光"
+
+msgid "LED ON"
+msgstr "打開LED燈"
+
+msgid "LED OFF"
+msgstr "關閉LED燈"
+
+msgid "LOGO ON"
+msgstr "打開LOGO燈"
+
+msgid "LOGO OFF"
+msgstr "關閉LOGO燈"
+
+# flsun add
 msgid "Bltouch found applied offset"
 msgstr "Bltouch 發現應用的偏移量"
 
@@ -313,7 +342,7 @@ msgid "Left:"
 msgstr "剩下時間："
 
 msgid "Limits"
-msgstr "限制"
+msgstr "打印机设置"
 
 msgid "Load"
 msgstr "載入"
@@ -599,6 +628,9 @@ msgstr "mm/s"
 
 msgid "mm/s^2"
 msgstr "mm/s^2"
+
+msgid "Control"
+msgstr "控制"
 
 #~ msgid "Show Only Heaters in Temp."
 #~ msgstr "僅顯示溫度下的加熱器"

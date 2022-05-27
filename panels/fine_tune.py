@@ -186,9 +186,11 @@ class FineTunePanel(ScreenPanel):
         else:
             self.extrusion -= int(self.percent_delta)
 
-        if self.extrusion < 0:
-            self.extrusion = 0
+        if self.extrusion < 20: #flsun modify ,change 0 to 20
+            self.extrusion = 20
 
+        if self.extrusion > 200: #flsun add,flow limit 20%~200%
+            self.extrusion = 200
         self._screen._ws.klippy.gcode_script(KlippyGcodes.set_extrusion_rate(self.extrusion))
 
     def change_fan(self, widget, dir):
@@ -210,9 +212,11 @@ class FineTunePanel(ScreenPanel):
         else:
             self.speed -= int(self.percent_delta)
 
-        if self.speed < 0:
-            self.speed = 0
+        if self.speed < 20: #flsun modify ,change 0 to 20
+            self.speed = 20
 
+        if self.speed > 500: #flsun add,speed17 limit 20%~500%
+            self.speed = 500
         self._screen._ws.klippy.gcode_script(KlippyGcodes.set_speed_rate(self.speed))
 
     def change_percent_delta(self, widget, delta):

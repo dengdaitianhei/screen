@@ -140,7 +140,7 @@ class JobStatusPanel(ScreenPanel):
         self.labels['elapsed'].get_style_context().add_class("printing-info")
         self.labels['duration'] = Gtk.Label(label="0s")
         self.labels['duration'].get_style_context().add_class("printing-info")
-        self.labels['est_time'] = Gtk.Label(label="/ 0s")
+        self.labels['est_time'] = Gtk.Label(label="")#flsun modify，change "/ 0s" to ""4.28
         self.labels['est_time'].get_style_context().add_class("printing-info")
         it_box = Gtk.Box(spacing=0)
         it_box.add(clock)
@@ -259,7 +259,7 @@ class JobStatusPanel(ScreenPanel):
         _ = self.lang.gettext
         self.labels['cancel'] = self._gtk.ButtonImage("stop", _("Cancel"), "color2")
         self.labels['cancel'].connect("clicked", self.cancel)
-        self.labels['control'] = self._gtk.ButtonImage("settings", _("Settings"), "color3")
+        self.labels['control'] = self._gtk.ButtonImage("control1", _("Control"), "color3")#flsun modify 4.28
         self.labels['control'].connect("clicked", self._screen._go_to_submenu, "")
         self.labels['fine_tune'] = self._gtk.ButtonImage("fine-tune", _("Fine Tuning"), "color4")
         self.labels['fine_tune'].connect("clicked", self.menu_item_clicked, "fine_tune", {
@@ -454,8 +454,8 @@ class JobStatusPanel(ScreenPanel):
                                   else duration)
             time_left = max(total_duration - duration, 0)
             self.update_text("time_left", str(self._gtk.formatTimeString(time_left)))
-            self.update_text("est_time", "/ %s" % str(self._gtk.formatTimeString(total_duration)))
-
+            #flsun delete ,don't show est_time4.28
+            #self.update_text("est_time", "/ %s" % str(self._gtk.formatTimeString(total_duration)))
     def state_check(self):
         ps = self._printer.get_stat("print_stats")
 
@@ -471,6 +471,7 @@ class JobStatusPanel(ScreenPanel):
         elif ps['state'] == "complete":
             self.progress = 1
             self.update_progress()
+            self._screen._ws.klippy.gcode_script("save_time")#flsun add,save print time,4.28
             while self._screen._cur_panels[-1] != "job_status":  #flsun add ,if page is not job_status ,back to job_status
                 self._screen._menu_go_back()#flsun add
             self.set_state("complete")
@@ -494,6 +495,7 @@ class JobStatusPanel(ScreenPanel):
             # Print was cancelled
             self.set_state("cancelled")
             self._screen.wake_screen()
+            self._screen._ws.klippy.gcode_script("save_time")#flsun add,save print time 4.28
             self.remove_close_timeout()
             timeout = self._config.get_main_config().getint("job_cancelled_timeout", 0)
             if timeout != 0:
@@ -540,8 +542,8 @@ class JobStatusPanel(ScreenPanel):
             self.labels['button_grid'].attach(self.labels['control'], 3, 0, 1, 1)
             self.enable_button("resume", "cancel")
         else:
-            if self.state == "cancelled":#flsun add ,if cancel print ,wait 10s to show menu button ,to solve a bug
-                time.sleep(10)
+            if self.state == "cancelled":#flsun add ,if cancel print ,wait 7s to show menu button ,to solve a bug
+                time.sleep(7)#flsun add
             self.labels['button_grid'].attach(Gtk.Label(""), 0, 0, 1, 1)
             self.labels['button_grid'].attach(Gtk.Label(""), 1, 0, 1, 1)
             self.labels['button_grid'].attach(self.labels['restart'], 2, 0, 1, 1)

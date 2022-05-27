@@ -115,19 +115,23 @@ class KlipperScreenConfig:
                               {"name": _("System") + " " + _("(default)"), "value": "system_lang"}
             ]}},
             {"move_speed_xy": {
-                "section": "main", "name": _("XY Move Speed (mm/s)"), "type": "scale", "value": "20",
-                "range": [5, 200], "step": 1}},
+                "section": "main", "name": _("XY Move Speed (mm/s)"), "type": "scale", "value": "20","range": [5, 200], "step": 1}},
             {"move_speed_z": {
                 "section": "main", "name": _("Z Move Speed (mm/s)"), "type": "scale", "value": "20",
                 "range": [5, 200], "step": 1}},
             {"print_sort_dir": {"section": "main", "type": None, "value": "name_asc"}},
-            {"print_estimate_method": {
-                "section": "main", "name": _("Estimated Time Method"), "type": "dropdown",
-                "value": "file", "options": [
-                    {"name": _("File") + " " + _("(default)"), "value": "file"},
-                    {"name": _("Duration Only"), "value": "duration"},
-                    {"name": _("Filament Used"), "value": "filament"},
-                    {"name": _("Slicer"), "value": "slicer"}]}},
+
+            #flsun add,set 24htime By zzcatvs
+            {"24htime": {"section": "main", "name": _("24 Hour Time"), "type": "binary", "value": "True"}},
+            #flsun del，print_estimate_method by zzcatvs
+            #{"print_estimate_method": {
+            #    "section": "main", "name": _("Estimated Time Method"), "type": "dropdown",
+            #    "value": "file", "options": [
+            #        {"name": _("File") + " " + _("(default)"), "value": "file"},
+            #        {"name": _("Duration Only"), "value": "duration"},
+            #        {"name": _("Filament Used"), "value": "filament"},
+            #        {"name": _("Slicer"), "value": "slicer"}]}},
+
             {"screen_blanking": {
                 "section": "main", "name": _("Screen Power Off Time"), "type": "dropdown",
                 "value": "3600", "callback": screen.set_screenblanking_timeout, "options": [
@@ -137,7 +141,8 @@ class KlipperScreenConfig:
                 "section": "main", "name": _("Icon Theme"), "type": "dropdown",
                 "value": "z-bolt", "callback": screen.restart_warning, "options": [
                     {"name": "Z-bolt" + " " + _("(default)"), "value": "z-bolt"}]}},
-            {"24htime": {"section": "main", "name": _("24 Hour Time"), "type": "binary", "value": "True"}},
+            #flsun del，24htime by zzcatvs
+            #{"24htime": {"section": "main", "name": _("24 Hour Time"), "type": "binary", "value": "True"}},
             {"side_macro_shortcut": {
                 "section": "main", "name": _("Macro shortcut on sidebar"), "type": "binary",
                 "value": "True", "callback": screen.toggle_macro_shortcut}},

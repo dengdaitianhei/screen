@@ -199,7 +199,7 @@ class Printer:
 
     def get_fans(self):
         fans = ["fan"] if len(self.get_config_section_list("fan")) > 0 else []
-        fan_types = ["controller_fan", "fan_generic", "heater_fan"]
+        fan_types = ["controller_fan", "fan_generic"]#flsun modify ,delete heater_fan to don't show hetaer_fan in fan page
         for type in fan_types:
             for f in self.get_config_section_list("%s " % type):
                 fans.append(f)

@@ -325,6 +325,8 @@ class PrintPanel(ScreenPanel):
 
         logging.info("Starting print: %s" % (filename))
         self._screen._ws.klippy.print_start(filename)
+        self._screen._ws.klippy.gcode_script(KlippyGcodes.set_speed_rate(100))#flsun add ,set flow rate to 100 when start print
+        self._screen._ws.klippy.gcode_script(KlippyGcodes.set_extrusion_rate(100))#flsun add ,set speed rate to 100 when start print
 
     def delete_file(self, filename):
         dir_parts = ("gcodes/%s" % filename).split('/')[:-1]

@@ -5,10 +5,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: KlipperScreen\n"
+"Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-02-26 15:48-0300\n"
-"PO-Revision-Date: 2022-02-26 15:16-0300\n"
+"POT-Creation-Date: 2022-02-08 13:36-0300\n"
+"PO-Revision-Date: 2022-02-08 13:39-0300\n"
 "Last-Translator: O. Robardet\n"
 "Language-Team: \n"
 "Language: fr_FR\n"
@@ -19,11 +19,15 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
 #, python-format
+msgid "%d Packages will be updated"
+msgstr "%d packages seront mis ®§ jour"
+
+#, python-format
 msgid "%s will be updated to version"
-msgstr "%s sera mis √† jour vers la version"
+msgstr "%s sera mis ®§ jour vers la version"
 
 msgid "(default)"
-msgstr "(d√©faut)"
+msgstr "(d®¶faut)"
 
 msgid "24 Hour Time"
 msgstr "Format 24 heures"
@@ -44,16 +48,16 @@ msgid "Add bed mesh profile"
 msgstr "Ajouter un profil de maillage"
 
 msgid "Are you sure you want to run Emergency Stop?"
-msgstr "√ätes-vous s√ªr de vouloir ex√©cuter l'arr√™t d'urgence?"
+msgstr "®∫tes-vous s?r de vouloir ex®¶cuter l'arr®∫t d'urgence?"
 
 msgid "Are you sure you wish to cancel this print?"
-msgstr "√ätes-vous s√ªr de vouloir annuler cette impression?"
+msgstr "®∫tes-vous s?r de vouloir annuler cette impression?"
 
 msgid "Are you sure you wish to reboot the system?"
-msgstr "√ätes-vous s√ªr de vouloir red√©marrer le syst√®me?"
+msgstr "®∫tes-vous s?r de vouloir red®¶marrer le syst®®me?"
 
 msgid "Are you sure you wish to shutdown the system?"
-msgstr "√ätes-vous s√ªr de vouloir arr√™ter le syst√®me?"
+msgstr "®∫tes-vous s?r de vouloir arr®∫ter le syst®®me?"
 
 msgid "Bed Level"
 msgstr "Nivelage du plateau"
@@ -61,17 +65,40 @@ msgstr "Nivelage du plateau"
 msgid "Bed Mesh"
 msgstr "Maillage du plateau"
 
-msgid "Bltouch found applied offset"
-msgstr "Bltouch a trouv√© le d√©calage appliqu√©"
+#flsun add ,from next line until next flsun add
+msgid "Please plug in leveling switch before auto-leveling"
+msgstr "Veuillez brancher le commutateur de nivellement avant le nivellement automatique"
+
+msgid "Please remove leveling switch before move Z0"
+msgstr "Veuillez retirer le commutateur de mise ®§ nivellement avant de d®¶placer Z0"
+
+msgid "Move Z0"
+msgstr "D®¶placer Z0"
+
+msgid "light"
+msgstr "l®¶ger"
+
+msgid "LED ON"
+msgstr ""
+
+msgid "LED OFF"
+msgstr ""
+
+msgid "LOGO ON"
+msgstr ""
+
+msgid "LOGO OFF"
+msgstr ""
+#flsun add
 
 msgid "Calibrate"
-msgstr "√âtalonner"
+msgstr "®¶talonner"
 
 msgid "Calibrated, save configuration to make it permanent"
-msgstr "Calibr√©, enregistrez la configuration pour la rendre permanente"
+msgstr "Calibr®¶, enregistrez la configuration pour la rendre permanente"
 
 msgid "Can't set above the maximum:"
-msgstr "Impossible de d√©finir au-dessus du maximum:"
+msgstr "Impossible de d®¶finir au-dessus du maximum:"
 
 msgid "Cancel"
 msgstr "Annuler"
@@ -80,7 +107,7 @@ msgid "Cancel Print"
 msgstr "Annuler l'impression"
 
 msgid "Cancelled"
-msgstr "Annul√©"
+msgstr "Annul®¶"
 
 msgid "Cancelling"
 msgstr "Annulation"
@@ -92,27 +119,27 @@ msgid ""
 "Check /tmp/KlipperScreen.log for more information.\n"
 "Please submit an issue on GitHub for help."
 msgstr ""
-"V√©rifiez /tmp/KlipperScreen.log pour plus d'informations.\n"
-"SVP envoyez une requ√™te sur GitHub pour obtenir de l'aide."
+"V®¶rifiez /tmp/KlipperScreen.log pour plus d'informations.\n"
+"SVP envoyez une requ®∫te sur GitHub pour obtenir de l'aide."
 
 msgid "Close"
 msgstr "Fermer"
 
 msgid "Complete"
-msgstr "Finalis√©"
+msgstr "Finalis®¶"
 
 msgid "Configuration"
 msgstr "Configuration"
 
 msgid "Confirm Emergency Stop"
-msgstr "Confirmer l'arr√™t d'urgence"
+msgstr "Confirmer l'arr®∫t d'urgence"
 
 msgid "Connected"
-msgstr "Connect√©"
+msgstr "Connect®¶"
 
 #, python-format
 msgid "Connecting to %s"
-msgstr "Connexion √† %s"
+msgstr "Connexion ®§ %s"
 
 msgid "Console"
 msgstr "Console"
@@ -133,38 +160,38 @@ msgid "Delete"
 msgstr "Effacer"
 
 msgid "Deselect"
-msgstr "D√©s√©lectionner"
+msgstr "D®¶s®¶lectionner"
 
 msgid "Disable Motors"
-msgstr "D√©sactiver les moteurs"
+msgstr "D®¶sactiver les moteurs"
 
 msgid "Disable XY"
-msgstr "D√©sactiver XY"
+msgstr "D®¶sactiver XY"
 
 msgid "Disconnect"
-msgstr "D√©connecter"
+msgstr "D®¶connecter"
 
 msgid "Displayed Macros"
-msgstr "Macros affich√©es"
+msgstr "Macros affich®¶es"
 
 msgid "Distance (mm)"
 msgstr "Distance (mm)"
 
 #, python-format
 msgid "Do you want to recover %s?"
-msgstr "Voulez-vous r√©cup√©rer %s¬†?"
+msgstr "Voulez-vous r®¶cup®¶rer %s??"
 
 msgid "Duration Only"
-msgstr "Dur√©e seulement"
+msgstr "Dur®¶e seulement"
 
 msgid "Elapsed:"
-msgstr "√âcoul√©:"
+msgstr "®¶coul®¶:"
 
 msgid "Error"
 msgstr "Erreur"
 
 msgid "Estimated Time Method"
-msgstr "M√©thode d'estimation du temps"
+msgstr "M®¶thode d'estimation du temps"
 
 msgid "Extrude"
 msgstr "Extruder"
@@ -176,25 +203,25 @@ msgid "Extrusion -"
 msgstr "Extrusion -"
 
 msgid "Failed, adjust position first"
-msgstr "√âchec, ajustez d'abord la position"
+msgstr "®¶chec, ajustez d'abord la position"
 
 msgid "Fan"
 msgstr "Ventilateur"
 
 msgid "Filament Used"
-msgstr "Filament utilis√©"
+msgstr "Filament utilis®¶"
 
 msgid "File"
 msgstr "Fichier"
 
 msgid "Fine Tuning"
-msgstr "R√©glages fins"
+msgstr "R®¶glages fins"
 
 msgid "Finish"
 msgstr "Fin"
 
 msgid "Firmware Restart"
-msgstr "Red√©marrer le firmware"
+msgstr "Red®¶marrer le firmware"
 
 msgid "Font Size"
 msgstr "Taille de police"
@@ -239,7 +266,7 @@ msgid "IPv6"
 msgstr "IPv6"
 
 msgid "Icon Theme"
-msgstr "Th√®me ic√¥nes"
+msgstr "Th®®me ic?nes"
 
 msgid "Increase"
 msgstr "Augmenter"
@@ -248,7 +275,7 @@ msgid "Initializing"
 msgstr "Initialisation"
 
 msgid "Initializing printer..."
-msgstr "D√©marrage de l'imprimante..."
+msgstr "D®¶marrage de l'imprimante..."
 
 msgid "Interface"
 msgstr "Interface"
@@ -267,40 +294,40 @@ msgstr "Inverser Z"
 
 msgid "Klipper Restart"
 msgstr ""
-"Red√©marrer\n"
+"Red®¶marrer\n"
 "Klipper"
 
 msgid "Klipper Version"
 msgstr "Version de Klipper"
 
 msgid "Klipper has disconnected"
-msgstr "Klipper s'est d√©connect√©"
+msgstr "Klipper s'est d®¶connect®¶"
 
 msgid ""
 "Klipper has encountered an error with the micro-controller.\n"
 "Please recompile and flash."
 msgstr ""
-"Klipper a rencontr√© une erreur avec le micro-contr√¥leur.\n"
+"Klipper a rencontr®¶ une erreur avec le micro-contr?leur.\n"
 "Veuillez recompiler et reflasher."
 
 msgid "Klipper has encountered an error."
-msgstr "Klipper a rencontr√© une erreur."
+msgstr "Klipper a rencontr®¶ une erreur."
 
 msgid ""
 "Klipper has encountered an error.\n"
 "Issue a FIRMWARE_RESTART to attempt fixing the issue."
 msgstr ""
-"Klipper a rencontr√© une erreur. \n"
+"Klipper a rencontr®¶ une erreur. \n"
 "Taper FIRMWARE_RESTART pour fixer l'erreur."
 
 msgid "Klipper has shutdown"
-msgstr "Klipper s'est arr√™t√©"
+msgstr "Klipper s'est arr®∫t®¶"
 
 msgid "Klipper is attempting to start"
-msgstr "Klipper tente de d√©marrer"
+msgstr "Klipper tente de d®¶marrer"
 
 msgid "Klipper will reboot"
-msgstr "Klipper va red√©marrer"
+msgstr "Klipper va red®¶marrer"
 
 msgid "KlipperScreen Version"
 msgstr "Version de KlipperScreen"
@@ -324,7 +351,7 @@ msgid "Lower Nozzle"
 msgstr "Rapprocher la buse"
 
 msgid "Macro shortcut on sidebar"
-msgstr "Raccourci macro sur la barre lat√©rale"
+msgstr "Raccourci macro sur la barre lat®¶rale"
 
 msgid "Macros"
 msgstr "Macros"
@@ -333,13 +360,13 @@ msgid "Main Menu"
 msgstr "Menu principal"
 
 msgid "Max Accelation"
-msgstr "Acc√©l√©ration maximale"
+msgstr "Acc®¶l®¶ration maximale"
 
 msgid "Max Acceleration to Deceleration"
-msgstr "Acc√©l√©ration maximale √† d√©c√©l√©ration"
+msgstr "Acc®¶l®¶ration maximale ®§ d®¶c®¶l®¶ration"
 
 msgid "Max Velocity"
-msgstr "V√©locit√© maximale"
+msgstr "V®¶locit®¶ maximale"
 
 msgid "Medium"
 msgstr "Moyen"
@@ -348,7 +375,7 @@ msgid "Menu"
 msgstr "Menu"
 
 msgid "Modified"
-msgstr "Modifi√©"
+msgstr "Modifi®¶"
 
 msgid "Move"
 msgstr "Mouvement"
@@ -360,25 +387,20 @@ msgid "Name"
 msgstr "Nom"
 
 msgid "Network"
-msgstr "R√©seau"
+msgstr "R®¶seau"
 
 msgid "Nothing selected"
-msgstr "Rien de s√©lectionn√©"
+msgstr "Rien de s®¶lectionn®¶"
 
 msgid "Off"
-msgstr "√âteindre"
+msgstr "®¶teindre"
 
 #, python-format
-msgid "Outdated by %d"
-msgstr "Obsol√®te de %d"
+msgid "Outdated by %d commits:"
+msgstr "En retard de %d commits?:"
 
 msgid "PSK for"
 msgstr "PSK pour"
-
-msgid "Package will be updated"
-msgid_plural "Packages will be updated"
-msgstr[0] "Le paquet sera mis √† jour"
-msgstr[1] "Forfaits seront mis √† jour"
 
 msgid "Pause"
 msgstr "Pause"
@@ -396,7 +418,7 @@ msgid "Print"
 msgstr "Imprimer"
 
 msgid "Print Control"
-msgstr "Contr√¥le de l'impression"
+msgstr "Contr?le de l'impression"
 
 msgid "Print Time"
 msgstr "Temps d'impression"
@@ -407,35 +429,29 @@ msgstr "Connexions aux imprimantes"
 msgid "Printing"
 msgstr "Impression"
 
-msgid "Probe found applied offset"
-msgstr "Probe a trouv√© le d√©calage appliqu√©"
-
 msgid "Profile Name:"
 msgstr "Nom de profil:"
 
 msgid "Quad Gantry Level"
-msgstr "Portique √† quatre niveaux"
+msgstr "Portique ®§ quatre niveaux"
 
 msgid "Raise Nozzle"
-msgstr "√âloigner la buse"
+msgstr "®¶loigner la buse"
 
 msgid "Recover Hard"
-msgstr "R√©cup√©ration \"--hard\""
+msgstr "R®¶cup®¶ration \"--hard\""
 
 msgid "Recover Soft"
-msgstr "R√©cup√©rer \"--soft\""
-
-msgid "Reference"
-msgstr "R√©f√©rence"
+msgstr "R®¶cup®¶rer \"--soft\""
 
 msgid "Restart"
-msgstr "Red√©marrer"
+msgstr "Red®¶marrer"
 
 msgid "Resume"
 msgstr "Reprendre"
 
 msgid "Retract"
-msgstr "R√©tracter"
+msgstr "R®¶tracter"
 
 msgid "Save"
 msgstr "Enregistrer"
@@ -447,19 +463,19 @@ msgid "Save configuration"
 msgstr "Enregistrer la configuration"
 
 msgid "Screen Power Off Time"
-msgstr "D√©lai d'extinction de l'√©cran"
+msgstr "D®¶lai d'extinction de l'®¶cran"
 
 msgid "Screws Adjust"
 msgstr "Ajuster les vis"
 
 msgid "Select"
-msgstr "S√©lectionner"
+msgstr "S®¶lectionner"
 
 msgid "Set Temp"
-msgstr "R√©gler la temp"
+msgstr "R®¶gler la temp"
 
 msgid "Settings"
-msgstr "Param√®tres"
+msgstr "Param®®tres"
 
 msgid "Show"
 msgstr "Montrer"
@@ -477,7 +493,7 @@ msgid "Sort by: "
 msgstr "Trier par: "
 
 msgid "Speed (mm/s)"
-msgstr "Vitesse de d√©placement (mm/s)"
+msgstr "Vitesse de d®¶placement (mm/s)"
 
 msgid "Speed +"
 msgstr "Vitesse +"
@@ -486,44 +502,44 @@ msgid "Speed -"
 msgstr "Vitesse -"
 
 msgid "Square Corner Velocity"
-msgstr "V√©locit√© des angles droits"
+msgstr "V®¶locit®¶ des angles droits"
 
 msgid "Start"
-msgstr "D√©marrer"
+msgstr "D®¶marrer"
 
 msgid "Starting WiFi Re-association"
-msgstr "D√©marrage de la re-association WiFi"
+msgstr "D®¶marrage de la re-association WiFi"
 
 msgid "Starting recovery for"
-msgstr "D√©marrage de la r√©cup√©ration pour"
+msgstr "D®¶marrage de la r®¶cup®¶ration pour"
 
 msgid "Starting update for"
-msgstr "D√©marrage de la mise √† jour pour"
+msgstr "D®¶marrage de la mise ®§ jour pour"
 
 msgid "System"
-msgstr "Syst√®me"
+msgstr "Syst®®me"
 
 msgid ""
 "System\n"
 "Restart"
 msgstr ""
-"Red√©marrer\n"
-"le syst√®me"
+"Red®¶marrer\n"
+"le syst®®me"
 
 msgid ""
 "System\n"
 "Shutdown"
-msgstr "Arr√™t du Syst√®me"
+msgstr "Arr®∫t du Syst®®me"
 
-msgid "Temp (¬∞C)"
-msgstr "Temp (¬∞C)"
+msgid "Temp (°„C)"
+msgstr "Temp (°„C)"
 
 msgid "Temperature"
-msgstr "Temp√©rature"
+msgstr "Temp®¶rature"
 
 #, python-format
 msgid "To apply %s KlipperScreen needs to be restarted"
-msgstr "Pour appliquer %s KlipperScreen doit √™tre red√©marr√©"
+msgstr "Pour appliquer %s KlipperScreen doit ®∫tre red®¶marr®¶"
 
 msgid "Tool"
 msgstr "Outil"
@@ -535,16 +551,16 @@ msgid "Unknown Heater "
 msgstr "Chauffage inconnu "
 
 msgid "Unload"
-msgstr "D√©charger"
+msgstr "D®¶charger"
 
 msgid "Up To Date"
-msgstr "√Ä jour"
+msgstr "®§ jour"
 
 msgid "Update"
-msgstr "Mise √† jour"
+msgstr "Mise ®§ jour"
 
 msgid "Uploaded"
-msgstr "T√©l√©charg√©"
+msgstr "T®¶l®¶charg®¶"
 
 msgid "View Mesh"
 msgstr "Voir le maillage"
@@ -556,7 +572,7 @@ msgid "X-"
 msgstr "X-"
 
 msgid "XY Move Speed (mm/s)"
-msgstr "Vitesse de d√©placement XY (mm/s)"
+msgstr "Vitesse de d®¶placement XY (mm/s)"
 
 msgid "Y+"
 msgstr "Y+"
@@ -568,10 +584,10 @@ msgid "Z Calibrate"
 msgstr "Calibration Z"
 
 msgid "Z Move Speed (mm/s)"
-msgstr "Vitesse de d√©placement Z (mm/s)"
+msgstr "Vitesse de d®¶placement Z (mm/s)"
 
 msgid "Z Offset"
-msgstr "D√©calage Z"
+msgstr "D®¶calage Z"
 
 msgid "Z Tilt"
 msgstr "Z Tilt"
@@ -582,18 +598,8 @@ msgstr "Z+"
 msgid "Z-"
 msgstr "Z-"
 
-msgid "commit"
-msgid_plural "commits"
-msgstr[0] "changement"
-msgstr[1] "changements"
-
 msgid "dBm"
 msgstr "dBm"
-
-msgid "hour"
-msgid_plural "hours"
-msgstr[0] "heur"
-msgstr[1] "heures"
 
 msgid "minutes"
 msgstr "minutes"
@@ -608,7 +614,7 @@ msgid "mm/s^2"
 msgstr "mm/s^2"
 
 #~ msgid "Show Only Heaters in Temp."
-#~ msgstr "Afficher uniquement les √©l√©ments chauffants en temp."
+#~ msgstr "Afficher uniquement les ®¶l®¶ments chauffants en temp."
 
 #~ msgid "Target"
 #~ msgstr "Cibler"
@@ -620,16 +626,16 @@ msgstr "mm/s^2"
 #~ msgstr "Clavier"
 
 #~ msgid "Preheat"
-#~ msgstr "Pr√©chauffer"
+#~ msgstr "Pr®¶chauffer"
 
 #~ msgid "Screen will show in less than one second"
-#~ msgstr "L'√©cran s'affichera en moins d'une seconde"
+#~ msgstr "L'®¶cran s'affichera en moins d'une seconde"
 
 #~ msgid "Medium (default)"
-#~ msgstr "Moyen (d√©faut)"
+#~ msgstr "Moyen (d®¶faut)"
 
 #~ msgid "File Estimation (default)"
-#~ msgstr "Fichier (d√©faut)"
+#~ msgstr "Fichier (d®¶faut)"
 
 #~ msgid "..."
 #~ msgstr "..."
@@ -638,7 +644,7 @@ msgstr "mm/s^2"
 #~ msgstr "Changer d'imprimante"
 
 #~ msgid "Fan Off"
-#~ msgstr "Arr√™ter "
+#~ msgstr "Arr®∫ter "
 
 #~ msgid "Fan On"
 #~ msgstr "Allumer"
@@ -647,7 +653,7 @@ msgstr "mm/s^2"
 #~ msgstr "Rapide"
 
 #~ msgid "Set Speed"
-#~ msgstr "D√©finir"
+#~ msgstr "D®¶finir"
 
 #~ msgid "Slow"
 #~ msgstr "Lent"
@@ -665,7 +671,7 @@ msgstr "mm/s^2"
 #~ msgstr "Charge moyenne"
 
 #~ msgid "Network Info"
-#~ msgstr "Information r√©seau "
+#~ msgstr "Information r®¶seau "
 
 #~ msgid "Back"
 #~ msgstr "Retour"
@@ -686,7 +692,7 @@ msgstr "mm/s^2"
 #~ msgstr "Info systeme"
 
 #~ msgid "Time Elapsed"
-#~ msgstr "Temps √©coul√©"
+#~ msgstr "Temps ®¶coul®¶"
 
 #~ msgid "Time Left"
 #~ msgstr "temps restant"

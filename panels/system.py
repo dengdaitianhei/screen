@@ -21,9 +21,10 @@ class SystemPanel(ScreenPanel):
 
         grid = self._gtk.HomogeneousGrid()
         grid.set_row_homogeneous(False)
-
-        restart = self._gtk.ButtonImage('refresh', "\n".join(_('Klipper Restart').split(' ')), 'color1')
-        restart.connect("clicked", self.restart_klippy)
+        #Flsun，add System "Klipper Restart" button. by:zzcatvs
+        restart = self._gtk.ButtonImage('refresh', "\n".join(_('Screen Restart').split(' ')), 'color1')
+        #restart.connect("clicked", self.restart_klippy)
+        restart.connect("clicked", self.restart_ks)
         restart.set_vexpand(False)
         firmrestart = self._gtk.ButtonImage('refresh', "\n".join(_('Firmware Restart').split(' ')), 'color2')
         firmrestart.connect("clicked", self.restart_klippy, "firmware")
@@ -99,12 +100,12 @@ class SystemPanel(ScreenPanel):
                 i = i + 1
 
         scroll.add(infogrid)
-
-        grid.attach(scroll, 0, 0, 4, 2)
+        #Flsun，del System "shutdown" button. by:zzcatvs
+        grid.attach(scroll, 0, 0, 3, 2)
         grid.attach(restart, 0, 2, 1, 1)
         grid.attach(firmrestart, 1, 2, 1, 1)
         grid.attach(reboot, 2, 2, 1, 1)
-        grid.attach(shutdown, 3, 2, 1, 1)
+        #grid.attach(shutdown, 2, 2, 1, 1)
         self.content.add(grid)
 
     def activate(self):
@@ -409,7 +410,7 @@ class SystemPanel(ScreenPanel):
         if type == "firmware":
             self._screen._ws.klippy.restart_firmware()
         else:
-            self._screen._ws.klippy.restart()
+           self._screen._ws.klippy.restart()
 
     def restart_ks(self, widget):
         os.system("sudo systemctl restart %s" % self._config.get_main_config_option('service'))

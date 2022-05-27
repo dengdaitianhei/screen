@@ -43,15 +43,12 @@ class ZCalibratePanel(ScreenPanel):
                     self.bs_deltas = [bs[0], bs[-1]]
                 self.bs_delta = self.bs_deltas[0]
 
-        self.labels['Move_Z0'] = self._gtk.ButtonImage("arrow-down", _("Move Z0"), "color2")
-        self.labels['Move_Z0'].connect("clicked", self.Move_Z0)
-
-        grid.attach(self.labels['Move_Z0'], 0, 0, 1, 1)
-
-        self.labels['z+'] = self._gtk.ButtonImage("z-farther", _("Z+"), "color1")
+        #flsun add,"arrow-up" modify "z-farther" By:zzcatvs  
+        self.labels['z+'] = self._gtk.ButtonImage("z-farther", _("Z+"), "color1")  
         self.labels['z+'].connect("clicked", self.change_babystepping, "+")
         self.labels['zoffset'] = Gtk.Label("0.00" + _("mm"))
-        self.labels['zoffset'].get_style_context().add_class('temperature_entry')
+        self.labels['zoffset'].get_style_context().add_class('temperature_entry')        
+        #flsun add,"arrow-down" modify "z-closer" By:zzcatvs        
         self.labels['z-'] = self._gtk.ButtonImage("z-closer", _("Z-"), "color1")
         self.labels['z-'].connect("clicked", self.change_babystepping, "-")
 
@@ -138,7 +135,4 @@ class ZCalibratePanel(ScreenPanel):
                 continue
             self.labels[i].set_active(False)
     
-    def Move_Z0(self, widget):
-        gcode = "G28\nG1 Z0 F1000"
-        self._screen._ws.klippy.gcode_script(gcode)
     

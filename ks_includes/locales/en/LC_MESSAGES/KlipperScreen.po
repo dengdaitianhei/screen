@@ -11,7 +11,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.0\n"
+"X-Generator: Poedit 3.0.1\n"
 
 #, python-format
 msgid "%s will be updated to version"
@@ -21,6 +21,16 @@ msgid "(default)"
 msgstr ""
 
 msgid "24 Hour Time"
+msgstr ""
+
+msgid "Splash"
+msgstr ""
+
+msgid "Screen Restart"
+msgstr ""
+
+
+msgid "Printer"
 msgstr ""
 
 msgid "Abort"
@@ -56,6 +66,32 @@ msgstr ""
 msgid "Bed Mesh"
 msgstr ""
 
+# flsun add ,from next line until next flsun add
+msgid "Please plug in leveling switch before auto-leveling"
+msgstr ""
+
+msgid "Please remove leveling switch before move Z0"
+msgstr ""
+
+msgid "Move Z0"
+msgstr ""
+
+msgid "light"
+msgstr ""
+
+msgid "LED ON"
+msgstr ""
+
+msgid "LED OFF"
+msgstr ""
+
+msgid "LOGO ON"
+msgstr ""
+
+msgid "LOGO OFF"
+msgstr ""
+
+# flsun add
 msgid "Bltouch found applied offset"
 msgstr ""
 
@@ -590,4 +626,7 @@ msgid "mm/s"
 msgstr ""
 
 msgid "mm/s^2"
+msgstr ""
+
+msgid "Control"
 msgstr ""
