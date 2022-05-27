@@ -5,4 +5,4 @@ netifaces==0.11.0
 requests==2.27.1
 websocket-client==1.2.3
 pycairo==1.20.1
-PyGObject==3.42.0
+PyGObject==3.42.1
