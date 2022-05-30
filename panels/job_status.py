@@ -558,7 +558,7 @@ class JobStatusPanel(ScreenPanel):
 
     def update_filename(self):
         self.filename = self._printer.get_stat('print_stats', 'filename')
-        self.update_text("file", os.path.splitext(self._printer.get_stat('print_stats', 'filename'))[0])
+        self.update_text("file", os.path.basename(os.path.splitext(self._printer.get_stat('print_stats', 'filename'))[0]))
         self.update_percent_complete()
         self.update_file_metadata()
 
